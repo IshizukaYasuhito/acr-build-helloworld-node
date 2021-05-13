@@ -1,10 +1,12 @@
-on: [push]
-name: Linux_Container_Workflow
+name: name-jetson-nx
+on:
+  push:
+    branches: ishizuka_main
 
 jobs:
     build-and-deploy:
-        runs-on: self-hosted
+        runs-on: [self-hosted, X64, Windows]
         steps:
         # checkout the repo 
-        - name: 'Checkout GitHub Action'
-          uses: actions/checkout@main
+        - name: Checkout-and-build
+          uses: actions/checkout@v2.0.0
