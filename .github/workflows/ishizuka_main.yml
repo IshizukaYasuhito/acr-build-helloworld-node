@@ -5,7 +5,7 @@ on:
 
 jobs:
     build-and-deploy:
-        runs-on: [self-hosted, ishizuka]
+        runs-on: [self-hosted, fsi]
         steps:
         # checkout the repo 
         - name: Checkout-and-build
